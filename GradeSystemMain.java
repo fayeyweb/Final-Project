@@ -34,7 +34,7 @@ public class GradeSystemMain {
 
     // METHOD 2 – show main menu
     static void showMenu() {
-        while (true) {
+        while (true) {   //babalik sa menu after mag register or what
 
             String[] options = {"Register", "Login", "Exit"};
             int choice = JOptionPane.showOptionDialog(
@@ -42,9 +42,9 @@ public class GradeSystemMain {
                     JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                     null, options, options[0]);
 
-            if (choice == 0) register();
+            if (choice == 0) register(); //Itatawag yung register() method, mapupunta user sa registration screen
             else if (choice == 1) login();
-            else break;
+            else break; // Lalabas sa while loop
         }
     }
 
@@ -56,13 +56,13 @@ public class GradeSystemMain {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
                 null, type, type[0]);
 
-        if (c == 0) {
+        if (c == 0) {  //→ Teacher pinili
             String user = JOptionPane.showInputDialog("Username:");
             String pass = JOptionPane.showInputDialog("Password:");
             teachers.add(new Teacher(user, pass));
             JOptionPane.showMessageDialog(null, "Teacher Registered!");
         }
-        else if (c == 1) {
+        else if (c == 1) {  //→ Student pinili
             String id = JOptionPane.showInputDialog("Student ID:");
             String name = JOptionPane.showInputDialog("Surname:");
             String pass = JOptionPane.showInputDialog("Password:");
