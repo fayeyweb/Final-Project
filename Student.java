@@ -30,8 +30,9 @@ public class Student {
         this.quiz = quiz;
         this.attendance = attendance;
     }
-
-    // EXTRA METHODS
+    // WEIGHTED FORMULA: 60% exam, 20% quiz, 20% attendance
+    public double getOverall() {
+        return (exam * 0.60) + (quiz * 0.20) + (attendance * 0.20);
     
     //Kukunin lahat ng grade tapos ina-add.
     public double getOverall() { return exam + quiz + attendance; }
@@ -51,4 +52,5 @@ public class Student {
     public double getExam() { return exam; }
     public double getQuiz() { return quiz; }
     public double getAttendance() { return attendance; }
+
 }
