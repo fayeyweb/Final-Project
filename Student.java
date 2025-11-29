@@ -32,9 +32,13 @@ public class Student {
     }
     // WEIGHTED FORMULA: 60% exam, 20% quiz, 20% attendance
     public double getOverall() {
-        return (exam * 0.60) + (quiz * 0.20) + (attendance * 0.20);
-    
-    //Kukunin lahat ng grade tapos ina-add.
+        double examPercent = (exam / 60) * 100;
+        double quizPercent = (quiz / 20) * 100;
+        double attendancePercent = (attendance / 20) * 100;
+
+    // Weighted computation
+        return (examPercent * 0.60) + (quizPercent * 0.20) + (attendancePercent * 0.20);
+    }
     public double getOverall() { return exam + quiz + attendance; }
     public String getStatus() {
       if (getOverall() >= 75) {
@@ -54,3 +58,4 @@ public class Student {
     public double getAttendance() { return attendance; }
 
 }
+
